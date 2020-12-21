@@ -1,0 +1,107 @@
+      .sidenav {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 15%;
+        left: 0;
+        background-color: #10202a;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+        padding-bottom: 100px;
+      }
+      
+      .sidenav a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 15px !important;
+        color: #fff;
+        display: block;
+        transition: 0.3s;
+      }
+      
+      .sidenav a:hover {
+        color: #f1f1f1;
+      }
+      
+      .sidenav .closebtn {
+        position: absolute;
+        top: 10px;
+        right: 25px;
+        font-size: 25px !important;
+        margin-left: 50px;
+      }
+      
+      @media screen and (max-height: 450px) {
+        .sidenav {padding-top: 15px;}
+        .sidenav a {font-size: 18px;}
+      }
+
+      
+
+
+      .accordion {
+        background-color: #10202a;
+        color: #444;
+        cursor: pointer;
+        padding: 18px;
+        width: 100%;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 14px;
+        transition: 0.4s;
+      }
+      
+      .acc:hover {
+        background-color: #091218;
+      }
+      
+      .panel {
+        padding: 0 18px;
+        display: none;
+        background-color: #091218;
+        overflow: hidden;
+        color: white;
+      }
+
+      .fa-css3{
+        border:1px solid #fff  !important;
+        padding: 15px;
+        border-radius: 50px !important;
+      }
+      .fa-css3:hover{
+       background-color: #fff !important;
+       color:#091218 !important;
+      }
+
+      .fa-js{
+        border:1px solid #fff  !important;
+        padding: 16px 14px;
+        border-radius: 50px !important;
+      }
+      .fa-js:hover{
+        background-color: #fff !important;
+        color:#091218 !important;
+      }
+
+      .fa-html5{
+        border:1px solid #fff  !important;
+        padding: 15px 16px;
+        border-radius: 50px !important;
+      }
+      .fa-html5:hover{
+        background-color: #fff !important;
+        color:#091218 !important;
+      }
+
+      .bar{
+        border-radius: 60px;
+        padding: 15px;
+        border: 1px solid #fff;
+      }
+      .bar:hover{
+        color: #10202a;
+        background-color: #fff;
+      }

@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+    <html>
+
+        <head>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+            <link rel="shortcut icon" type="image/x-icon" href="public/images/icons/favicon.svg" />
+            <title>e-Hena | Acceuil</title>
+            <link rel="stylesheet" href="public/css/bootstrap.min.css">
+            <link rel="stylesheet" href="public/css/style.css">
+            <link rel="stylesheet" href="public/css/sidenav.css">
+            <link rel="stylesheet" href="public/fonts/ionicons.min.css">
+            <link rel="stylesheet" href="public/css/pikaday.min.css">
+            <link rel="stylesheet" href="public/css/et-lineicons.css">
+            <link rel="stylesheet" href="public/css/all.min.css">
+            <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+            <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+        </head>
+
+        <style>
+            body{
+                font-family: Poppins, 'Nimbus Sans', sans-serif;
+            }
+        </style>
+
+        <body>
+    
+            <nav class="navbar navbar-dark navbar-expand-lg fixed-top bg-white portfolio-navbar gradient" id="accueil">
+                <div class="container"><a class="navbar-brand logo" href="index.html" style="font-size: 35px;" data-scroll-nav="0"><i class="fa fa-drumstick-bite" style="font-size: 50px !important;"></i>e-Hena</a><button class="navbar-toggler" data-toggle="collapse" data-target="#navbarNav"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="nav navbar-nav ml-auto">
+                            <li class="nav-item"> 
+                                <form class="form-newsletter" method="POST" action="#">
+                                    <input id="zavatra" type="text" placeholder="Rechercher ici..." list="listSearch">
+                                    <datalist id="listSearch">
+                                    </datalist>
+                                    <button class="btn-submit" onclick="search_game($('#zavatra').val())" type="button"><i class="fa fa-search"></i></button>
+                                </form>
+                            </li>
+                            <li class="nav-item" role="presentation"><a class="nav-link" style="cursor: pointer" href="index.html"><i class="fa fa-home"></i> Acceuil</a></li>
+                            <li class="nav-item" role="presentation"><a class="nav-link" href="view/product.html" data-toggle="modal"><i class="fa fa-cart-plus"></i> Nos Produits</a></li>
+                            <li class="nav-item" role="presentation" onclick="openNav()" ><a class="nav-link" style="cursor: pointer"><i class="fa fa-bars"></i> Menu</a></li>
+                            <li class="nav-item" role="presentation"><a class="nav-link" href="index.html" data-scroll-nav="2"><i class="fa fa-envelope"></i> Contacts</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        
+        
+            <main id="toppage" class="page lanidng-page" data-scroll-index="0">
+                <section class="portfolio-block block-intro" >
+                    <div class="container">
+                        <div class="about-me">
+                            <p>Bienvenu <strong>sur</strong> e-Hena</p>
+                            <a class="btn btn-primary" role="presentation" href="index.html" data-scroll-nav="1"><i class="fa fa-cart-plus" ></i> Acheter</a>
+                        </div>
+                    </div>
+                </section>
+            </main>
+
+        
+            <main class="page projects-page" id="projets" data-scroll-index="1">
+                <section class="portfolio-block projects-cards">
+                    <div class="container">
+                        <div class="heading">
+                            <h2 id="game">e-Hena | Produit</h2>
+                            <p class="text-muted card-text compte">Vous trouverez ici tous ce dont vous aurez besoins pour cuisiner de délicieux repas à base de viande.</p>
+                        </div>
+                        <div class="row">
+                            <div id="game_model"  class="col-md-6 col-lg-4">
+                                <div class="card border-0"><a href="#"><img src="public/images/produit/Akoho Gasy.jpg" alt="Card Image" class="card-img-top scale-on-hover"></a>
+                                    <div class="card-body">
+                                        <h6><a href="#"></a></h6>
+                                        <p class="text-muted card-text"><span style="font-weight: bold;">Akoho Gasy</span></p>
+                                        <p class="text-muted card-text"><span id="cat"></span><span class="esc" style="color: #fff !important;">e</span> <span class="price">20000Ar</span></p>
+                                        <a class="achatB btn btn-outline-success" data-toggle="modal" role="button" href="#"><i class="fa fa-shopping-cart"></i></a>
+                                        <a class="btn btn-outline-danger coeurIcon" role="button" onclick="heartMe($(this).attr('id'))" ><i class="fa fa-heart"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="game_model"  class="col-md-6 col-lg-4">
+                                <div class="card border-0"><a href="#"><img src="public/images/produit/saucisse fummée.jpg" alt="Card Image" class="card-img-top scale-on-hover"></a>
+                                    <div class="card-body">
+                                        <h6><a href="#"></a></h6>
+                                        <p class="text-muted card-text"><span style="font-weight: bold;">Saucisse fummée</span></p>
+                                        <p class="text-muted card-text"><span id="cat"></span><span class="esc" style="color: #fff !important;">e</span> <span class="price">20000Ar</span></p>
+                                        <a class="achatB btn btn-outline-success" data-toggle="modal" role="button" href="#"><i class="fa fa-shopping-cart"></i></a>
+                                        <a class="btn btn-outline-danger coeurIcon" role="button" onclick="heartMe($(this).attr('id'))" ><i class="fa fa-heart"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="game_model"  class="col-md-6 col-lg-4">
+                                <div class="card border-0"><a href="#"><img src="public/images/produit/Cuise de canard.jpg" alt="Card Image" class="card-img-top scale-on-hover"></a>
+                                    <div class="card-body">
+                                        <h6><a href="#"></a></h6>
+                                        <p class="text-muted card-text"><span style="font-weight: bold;">Cuisse de canard</span></p>
+                                        <p class="text-muted card-text"><span id="cat"></span><span class="esc" style="color: #fff !important;">e</span> <span class="price">8 500Ar</span></p>
+                                        <a class="achatB btn btn-outline-success" data-toggle="modal" role="button" href="#"><i class="fa fa-shopping-cart"></i></a>
+                                        <a class="btn btn-outline-danger coeurIcon" role="button" onclick="heartMe($(this).attr('id'))" ><i class="fa fa-heart"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="heading">
+                            <a class="btn btn-primary" role="presentation" href="index.html" data-scroll-nav="1"><i class="fa fa-plus" ></i> Voir plus</a>
+                        </div>
+                    </div>
+                </section>
+            </main>
+
+        
+            <section class="portfolio-block website gradient">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-md-12 col-lg-5 offset-lg-1 text">
+                            <h3>Promotion de la semaine</h3>
+                            <p> <u>Un poulet entier de 2kg</u> </p>
+                            <p class="text-muted card-text"><span id="cat"></span><span class="price" style="text-decoration:line-through;">  20000Ar </span><span>&nbsp&nbsp</span><i class="fas fa-long-arrow-alt-right"></i><span>&nbsp&nbsp</span><span class="price">  15000Ar </span></p>
+                            <img id="promo" src="public/images/produit/noel.png" alt="">                            
+                        </div>
+                        <div class="col-md-12 col-lg-5">
+                            <div class="produit-promo portfolio-laptop-mockup">
+                                <div class="screen">
+                                    <div class="screen-content" style="background-image:url(&quot;public/images/produit/Akoho\ Gasy.jpg&quot;);">
+                                        <a class="btn btn-outline-success" style="margin: 50% 0 0 85%" data-toggle="modal" role="button" href="#"><i class="fa fa-shopping-cart"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="keyboard"></div>
+                    </div>
+                </div>
+
+            </section>
+
+    <!--CONTACT START-->
+    <main class="page projects-page" data-scroll-index="2">
+        <section class="portfolio-block projects-cards">
+            <div class="container">
+                <div class="heading">
+                        <h2 id="game" class="entcont">Entrer en contact</h2>
+                        <p class="text-muted card-text compte">Si vous avez des questions ou des remarques, n'hésitez pas à nous contacter</p>
+                </div>
+                <div class="row">
+                    <div class="offset-md-1 col-md-10">
+                        <div class="contact-info mb-md50">
+                            <div class="row">
+                                <div class="col-md-4 mb-50 icon-tel">
+                                    <div class="item"> <span class="icon et-phone"></span>
+                                        <div class="cont">
+                                            <p>+261 34 91 449 33</p>
+                                            <p class="pcontact">Téléphone</p> 
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-50 icon-env">
+                                    <div class="item"> <span class="icon et-envelope"></span>
+                                        <div class="cont">
+                                            <p>e-hena.boucherie@gmail.com</p>
+                                            <p class="pcontact">Email</p> 
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-50 icon-map">
+                                    <div class="item"> <span class="icon et-map"></span>
+                                        <div class="cont">
+                                            <p>Ambatoroka, Tananarive</p>
+                                            <p class="pcontact">Adresse</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!--CONTACT END-->
+
+
+
+    <!--MAP START-->
+    <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6885.106578918147!2d47.54228074004742!3d-18.925922514145277!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTjCsDU1JzM0LjYiUyA0N8KwMzInMzIuNCJF!5e0!3m2!1sfr!2smg!4v1571832051023!5m2!1sfr!2smg" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+    </div>
+    <!--MAP END-->
+
+
+
+    <!--FOOTER START-->
+    <footer class="text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <!-- Footer Logo -->
+                    <div class="footer-logo"> 
+                        <img src="" alt="">
+                    </div>
+                    <!-- Social Media -->
+                    <div class="social"> 
+                        <a href="#"><i class="fa fa-facebook-square"></i></a> 
+                        <a href="#"><i class="fa fa-linkedin"></i></a> 
+                        <a href="https://github.com/L1_G2/e-Hena"><i class="fa fa-github"></i></a>
+                    </div>
+                    <!-- Copyright -->
+                    <p style="color: #fff !important;">Copyright © 2020 by <a href="https://github.com/FoyerSociety">L 1 G 2</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--FOOTER END-->
+
+    <div id="connexion" class="modal fade">
+        <div class="modal-dialog modal-login">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" style="font-weight: bold;">Se connecter</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                </div>
+                <div class="modal-body">
+                    <form  action="index.php?action=connexion" method="post">
+                        <div class="form-group">
+                            <input type="text" class="form-control" style="border-right: none !important; border-left: none !important; border-top:none !important; font-family: Poppins !important; font-size: 15px !important;" name="username" placeholder="téléphone ou mail" required="required">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" style="border-right: none !important; border-left: none !important; border-top:none !important; font-family: Poppins !important; font-size: 15px !important;" name="password" placeholder="Mot de passe" required="required">
+                        </div>
+                        <div class="form-group">
+                            <input type="button" onclick="connexion()" name="se_connecter"  style="border-radius: 25px !important;" class="btn btn-primary btn-block btn-lg" value="Se connecter">
+                        </div>
+                        <div class="form-group">
+                            <a style="font-family: Poppins !important; font-size: 15px !important;">Mot de passe oublié ?</a>
+                        </div>
+                        <div>
+                        <p class="alert-danger" style="text-align: center !important" name="erreur"></p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="inscrire" class="modal fade">
+        <div class="modal-dialog modal-login">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" style="font-weight: bold;">S'inscrire</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                </div>
+                <div class="modal-body">
+                    <form action="index.php?action=inscription" method="post">
+                        <div class="form-group">
+                            <input type="text" class="form-control" style="border-right: none !important; border-left: none !important; border-top:none !important; font-family: Poppins !important; font-size: 15px !important;" name="nom" placeholder="Nom" required="required">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" style="border-right: none !important; border-left: none !important; border-top:none !important; font-family: Poppins !important; font-size: 15px !important;" name="prenom" placeholder="Prénom" required="required">
+                        </div>
+
+                        <div class="form-group">
+                            <input type="text" class="form-control" style="border-right: none !important; border-left: none !important; border-top:none !important; font-family: Poppins !important; font-size: 15px !important;" name="cin" placeholder="Numéro CIN" required="required">
+                        </div>                        
+                        <div class="form-group">
+                            <input type="text" class="form-control" style="border-right: none !important; border-left: none !important; border-top:none !important; font-family: Poppins !important; font-size: 15px !important;" name="phone" placeholder="Téléphone" required="required">
+                        </div>                                           
+                        <div class="form-group">
+                            <input type="email" class="form-control" style="border-right: none !important; border-left: none !important; border-top:none !important; font-family: Poppins !important; font-size: 15px !important;" name="email" placeholder="E-mail" required="required">
+                        </div>
+
+                        <div class="form-group">
+                            <input type="password" class="form-control" style="border-right: none !important; border-left: none !important; border-top:none !important; font-family: Poppins !important; font-size: 15px !important;" name="password" placeholder="Mot de passe" required="required">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" style="border-right: none !important; border-left: none !important; border-top:none !important; font-family: Poppins !important; font-size: 15px !important;" name="cpassword" placeholder="Confirmer le mot de passe"
+                                required="required">
+                        </div>
+                        <div class="form-group">
+                            <input type="button" onclick="inscription()" name="valider_inscription" style="border-radius: 25px !important;" class="btn btn-primary btn-block btn-lg" value="S'inscrire">
+                        </div>
+                        <div>
+                            <p class="alert-danger" style="text-align: center !important" name="erreur"></p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="delete" class="modal fade">
+        <div class="modal-dialog modal-confirm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Etes vous sûr ?</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <p>Voulez-vous vraiment supprimer ce jeu ? Cette action est irréversible.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" data-dismiss="modal">Annuler</button>
+                    <button type="button" class="btn btn-danger">Supprimer</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="success" class="modal fade">
+        <div class="modal-dialog modal-confirm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Génial!</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <p class="text-center">Votre opération a été réussi.</p>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-success btn-block" data-dismiss="modal">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="successdown" class="modal fade">
+        <div class="modal-dialog modal-confirm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title"></h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <p class="text-center">Votre opération a été réussi.</p>
+                    <p class="text-center"> Le lien de téléchargement est envoyer à votre mail: </p>
+                    <p class="mailsend text-center"></p>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-success btn-block" data-dismiss="modal">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+            <div id="acheter" class="modal fade">
+                <div class="modal-dialog modal-login">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title" style="font-weight: bold;">Achat</h4>
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" style="border-right: none !important; border-left: none !important; border-top:none !important; font-family: Poppins !important; font-size: 15px !important;" name="password" placeholder="Mot de passe" required="required">
+                        </div>
+                        <div>
+                            <p class="alert-danger" style="text-align: center !important" name="erreur"></p>
+                        </div>
+                        <div class="bouton form-group">
+                            <input type="button" onclick="verifie_password($(this).parents('form'))" name="valider_se_connecter" style="border-radius: 25px !important;" class="btn btn-primary btn-block btn-lg" value="Se connecter">
+                            <label style="color:red;font-size:11;text-align: center"></label>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <h1" class="nav-title" style="margin: 5% 0 10% 10%  !important;color: white; font-weight: bolder;">MENU</h1>
+                <a href="#connexion" class="accordion acc" style="padding-bottom: 10% !important;margin-top: 15%;" data-toggle="modal"><i class="fa fa-door-open"></i> Se connecter</a>
+                <a href="#inscrire" class="accordion acc" style="padding-bottom: 10% !important;"  data-toggle="modal"><i class="fa fa-pencil-alt"></i> S'enregistrer</a>
+                <a href="#" class="accordion acc" style="padding-bottom: 10% !important;"><i class="fa fa-cart-plus"></i> Mon panier</a>
+                <a href="#" class="accordion acc" style="padding-bottom: 10% !important;"><i class="fa fa-sign-in-alt"></i> Se deconnecter</a>
+            </div>
+
+</body>
+            <script src="public/js/jquery.min.js"></script>
+            <script src="public/js/jquery-ui.js"></script>
+            <script src="public/js/bootstrap.min.js"></script>
+            <script src="public/js/pikaday.min.js"></script>
+            <script src="public/js/main.js"></script> <!-- Script principale du projet -->
+            <script src="public/js/theme.js"></script>
+            <script src="public/js/sidenav.js"></script>
+            <script src="public/js/all.min.js"></script>
+            
+
+            <!-- Script de scroll-->
+            <script src="public/js/scroll/scrollIt.min.js"></script>
+            <script src="public/js/scroll/scripts.js"></script>
+        
+        </body>
+    </html>
